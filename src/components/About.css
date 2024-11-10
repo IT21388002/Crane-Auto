@@ -1,0 +1,35 @@
+.link-arrow {
+    position: relative;
+    overflow: hidden;
+    text-decoration: none; /* Optional: remove underline from links */
+  }
+  
+  .link-arrow h2,
+  .link-arrow p {
+    transition: color 0.3s ease; /* Smooth transition for color change */
+  }
+  
+  .link-arrow::after {
+    content: '↗'; /* Using the diagonal arrow character */
+    position: absolute;
+    right: 20px; /* Adjust as needed */
+    top: 10px; /* Adjust the vertical position higher */
+    font-size: 24px; /* Make the arrow larger */
+    color: blue; /* Change to desired color */
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.3s ease;
+  }
+  
+  .link-arrow:hover::after {
+    opacity: 1; /* Show arrow on hover */
+  }
+  
+  /* Change colors on hover */
+  .link-arrow:hover h2 {
+    color: rgb(71, 134, 216); /* Change h2 color on hover */
+  }
+  
+  .link-arrow:hover p {
+    color: rgb(71, 134, 216); /* Change p color on hover */
+  }
+  
